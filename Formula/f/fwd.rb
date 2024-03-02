@@ -1,8 +1,15 @@
 class Fwd < Formula
   desc "Small program to automatically forward connections to remote sockets"
   homepage "https://github.com/DeCarabas/fwd"
-  url "https://github.com/DeCarabas/fwd/releases/download/v0.8.1/fwd-x86_64-apple-darwin.tar.gz"
-  sha256 "6ea27062d5ad7986cb68ee1b1702d6c421e329eda1668aa818faf35e9adc6aa5"
+
+  on_macos do
+    url "https://github.com/DeCarabas/fwd/releases/download/v0.8.1/fwd-x86_64-apple-darwin.tar.gz"
+    sha256 "6ea27062d5ad7986cb68ee1b1702d6c421e329eda1668aa818faf35e9adc6aa5"
+  end
+  on_linux do
+    url "https://github.com/DeCarabas/fwd/releases/download/v0.8.1/fwd-x86_64-unknown-linux-musl.tar.gz"
+    sha256 "77b5eb149241e4b6c3f5db4ace50cc79d959c75b357c875fe78b5a01e307b164"
+  end
   license "MIT"
 
   def install
