@@ -1,14 +1,12 @@
 class Fwd < Formula
   desc "Small program to automatically forward connections to remote sockets"
   homepage "https://github.com/DeCarabas/fwd"
-  url "https://github.com/DeCarabas/fwd/archive/refs/tags/v0.8.1.tar.gz"
-  sha256 "78bd3922817345755e4fb5348a53b4a88064cdbe6f0a01bf6ef412fac3c87944"
+  url "https://github.com/DeCarabas/fwd/releases/download/v0.8.1/fwd-x86_64-apple-darwin.tar.gz"
+  sha256 "6ea27062d5ad7986cb68ee1b1702d6c421e329eda1668aa818faf35e9adc6aa5"
   license "MIT"
 
-  depends_on "rust" => :build
-
   def install
-    system "cargo", "install", *std_cargo_args
+    bin.install "fwd"
   end
 
   test do
