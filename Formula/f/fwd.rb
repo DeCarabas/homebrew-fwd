@@ -3,12 +3,18 @@ class Fwd < Formula
   homepage "https://github.com/DeCarabas/fwd"
 
   on_macos do
-    url "https://github.com/DeCarabas/fwd/releases/download/v0.8.1/fwd-x86_64-apple-darwin.tar.gz"
-    sha256 "6ea27062d5ad7986cb68ee1b1702d6c421e329eda1668aa818faf35e9adc6aa5"
+    on_arm do
+      url "https://github.com/DeCarabas/fwd/releases/download/v0.9.0/fwd-aarch64-apple-darwin.tar.gz"
+      sha256 "d54ef3e44d1f29b9569ca5bbd8289c4a7ed6ed8ba5022af01d86eca236274605"
+    end
+    on_intel do
+      url "https://github.com/DeCarabas/fwd/releases/download/v0.9.0/fwd-x86_64-apple-darwin.tar.gz"
+      sha256 "08136cd3fc8445239f90b8b560bd8e99d63285fd20fa0b7a0879d8542a73420b"
+    end
   end
   on_linux do
-    url "https://github.com/DeCarabas/fwd/releases/download/v0.8.1/fwd-x86_64-unknown-linux-musl.tar.gz"
-    sha256 "77b5eb149241e4b6c3f5db4ace50cc79d959c75b357c875fe78b5a01e307b164"
+    url "https://github.com/DeCarabas/fwd/releases/download/v0.9.0/fwd-x86_64-unknown-linux-musl.tar.gz"
+    sha256 "ddc4fdfab18af1864876458ca774b8f6c5f43dc156662a244c8496e6390345cf"
   end
   license "MIT"
 
